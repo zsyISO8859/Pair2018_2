@@ -155,7 +155,7 @@ public class MathExam {
 					operator = mark_code[(int) (Math.random() * 4)];
 				} else {
 					System.out.println("输入年级有误！！");
-					System.exit(0);
+					return;
 				}
 			}
 			// 题目序号
@@ -465,7 +465,7 @@ public class MathExam {
 				System.out.println("文件写出错误");
 			}
 		} catch (FileNotFoundException e) {
-			System.out.println("文件未找到！！");
+			e.printStackTrace();
 		}
 		// 输出程序执行的结果
 		System.out.println("题目已经生成，详情请见out.txt");
